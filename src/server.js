@@ -1,7 +1,7 @@
-const express = require('express');
-const cors = require('cors');
-const { fetchNumbers } = require('./services/api');
-const { addNumbers, calculateAverage } = require('./services/numberService');
+import express from 'express';
+import cors from 'cors';
+import { fetchNumbers } from './services/api.js';
+import { addNumbers, calculateAverage } from './services/numberService.js';
 
 const app = express();
 const PORT = process.env.PORT || 9876;
@@ -70,4 +70,4 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-module.exports = app; 
+export default app; 
